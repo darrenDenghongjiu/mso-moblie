@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>眸事网-大数据营销获客平台,精准销售线索直达意向客户,提升30%-50%转化</title>
+	<meta name="description" content="眸事获客(眸事网)是国内首家大数据人工智能驱动的获客平台,一站式定制企业营销数据，做到真正的销售闭环.企业可根据自身市场需求定制销售线索，快速提升销售额,以达到最终的市场营销转化">
+	<meta name="keywords" content="大数据营销,销售线索,精准营销,市场营销,眸事获客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<script src="js/count.js"></script>
+    <style type="text/css">
+    html {
+    -ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+    }
+    body,
+    div,
+    p {
+    	margin: 0;
+    	padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    body {
+    	width: 100%;
+        *cursor: default;
+    	overflow: hidden;
+    	font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+		background:#10213d;
+    }
+    #pageContain {
+    	overflow: hidden;
+    }
+    .page {
+    	display: none;
+    	width: 100%;
+    	height: 100%;
+    	overflow: hidden;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
+    .contain {
+    	width: 100%;
+    	height: 100%;
+    	display: none;
+    	position: relative;
+    	z-index: 0;
+    }
+    .current .contain,.slide .contain {
+    	display: block;
+    }
+    .current {
+    	display: block;
+    	z-index: 1;
+    }
+    .slide {
+    	display: block;
+    	z-index: 2;
+    }
+    .swipe {
+        display: block;
+        z-index: 3;
+        transition-duration: 0ms !important;
+        -webkit-transition-duration: 0ms !important;
+    }
+
+    #navBar {
+    	z-index: 3;
+    	position: absolute;
+    	top: 10%;
+    	right: 3%;
+		opacity:0;
+    }
+    #navBar .active {
+        background: #ccc;
+    }
+    #navBar li {
+        cursor: pointer;
+        margin-bottom: 10px;
+        transition: all .7s ease;
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+
+	.page img { margin:40px auto 0 auto; display:block;}
+	.page1 img { width:73.9%;}
+	.page2 img { width:70.5%;}
+	.page3 img { width:64.9%;}
+	.page4 img { width:79.9%;}
+	.page6 img { width:80.1%;}
+	.page7 img { width:76.8%;}
+	.page { background:#10213d;}
+    .page5 p img { width:100%;}
+    .page5 p {
+        width: 100%;
+        height: 100%;
+        color:#fff;
+        text-align: center;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        opacity: 1;
+        transition: all .8s ease;
+        transform-origin: 50% 50%;
+    }
+    .step1 p {
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+    }
+    .step2 p {
+        -webkit-transform: translate(0, -100%);
+    }
+	a.btn-register { background:#01b9ff; position:fixed; bottom:0; left:0; right:0; width:100%; height:48px; z-index:999; color:#fff; text-align:center; line-height:48px; text-decoration:none;}
+	img.pagedown { width:28px; height:auto; position:absolute; bottom:68px; left:50%; margin-left:-14px;}
+	@-webkit-keyframes updown{
+		0%{
+		   bottom:68px; /*透明度为0*/
+		 }
+		100%{
+		   bottom:78px; /*透明度为1*/
+		}
+	  }
+	img.pagedown{
+		-webkit-animation: updown 1s infinite ease-in-out; 
+	}
+	.page7 a { position:absolute; display:block; width:220px; left:50%; margin-left:-110px; bottom:135px;}
+	.page7 a img { width:100%;}
+	.page7 p { position:absolute;bottom:65px; text-align:center; color:#485b7a; font-size:12px; width:100%;}
+	@media only screen and (max-width:320px){
+		.page7 img { width:70%;}
+		.page7 a { width:180px; margin-left:-90px; bottom:110px;}
+	}
+    </style>
+</head>
+<!--[if lte IE 7]>      
+<body scroll="no"> 
+<![endif]-->
+<!--[if gt IE 7]><!--> 
+<body> 
+<!--<![endif]-->
+	<div id="pageContain">
+		
+		<div class="page page1 current">
+			<div class="contain">
+				<img src="images/index/1.png" />
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div>
+
+		<div class="page page2">
+			<div class="contain">
+				<img src="images/index/2.png" />
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div>
+
+		<div class="page page3">
+			<div class="contain">
+				<img src="images/index/3.png" />
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div>
+
+		<div class="page page4">
+			<div class="contain">
+				<img src="images/index/4.png" />
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div>
+
+		<div class="page page5" data-step="2" data-step-restart="0">
+			<div class="contain">
+				<p class="demo-data-step">
+					<img src="images/index/5.png" />
+				</p>
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div>
+
+		<div class="page page6">
+			<div class="contain">
+				<img src="images/index/6.png" />
+			</div>
+			<img src="images/index/arrow.png" class="pagedown" />
+		</div> 
+		
+		<div class="page page7">
+			<div class="contain">
+				<img src="images/index/7.png" />
+			</div>
+			<a href="tel:400-900-5288"><img src="images/index/tel-number.png" /></a>
+			<p>Copyright©2011-2017<br />上海脉豪商务信息咨询有限公司</p>
+		</div>
+	</div>
+	<ul id="navBar">
+		<li>0</li>
+		<li>1</li>
+		<li>2</li>
+ 		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<a class="btn-register" href="register.html">注册</a>
+<script type="text/javascript" src="js/fullPage.js"></script>
+<script type="text/javascript">
+	
+var runPage;
+
+runPage = new FullPage({
+
+	id : 'pageContain',                            // id of contain
+	slideTime : 800,                               // time of slide
+	continuous : false,                            // create an infinite feel with no endpoints
+	effect : {                                     // slide effect
+        	transform : {
+        		translate : 'Y',				   // 'X'|'Y'|'XY'|'none'
+        		scale : [.1, 1],				   // [scalefrom, scaleto]
+        		rotate : [0, 0]				       // [rotatefrom, rotateto]
+        	},
+        	opacity : [0, 1]                       // [opacityfrom, opacityto]
+    	},                           
+	mode : 'wheel,touch,nav:navBar',               // mode of fullpage
+    start : 0,                                     // which page will display when install
+	easing : 'ease'                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1];
+    //  ,onSwipeStart : function(index, thisPage) {   // callback before pageChange
+    //    return 'stop';
+    //  }
+    //  ,beforeChange : function(index, thisPage) {   // callback before pageChange
+    //    return 'stop';
+    //  }
+    //  ,callback : function(index, thisPage) {       // callback when pageChange
+    //    alert(index);
+    //  };
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+});
+</script>
+</body>
+</html>

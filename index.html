@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>眸事网-大数据营销获客平台,精准销售线索直达意向客户,提升30%-50%转化</title>
+	<meta name="description" content="眸事获客(眸事网)是国内首家大数据人工智能驱动的获客平台,一站式定制企业营销数据，做到真正的销售闭环.企业可根据自身市场需求定制销售线索，快速提升销售额,以达到最终的市场营销转化">
+	<meta name="keywords" content="大数据营销,销售线索,精准营销,市场营销,眸事获客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<script src="js/count.js"></script>
+	
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.event.drag-1.5.min.js"></script>
+   <script src="js/jquery.touchSlider.js"></script>
+   <script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+
+   <style type="text/css">
+	
+    html {
+		-ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+    }
+	
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+	
+    ul,ol {
+        list-style: none;
+    }
+	
+    body {
+    	width: 100%;
+        *cursor: default;
+    	font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+		background:url(/images/index/back.png);
+    }
+	
+
+	
+    .mso-banner { width:100%; }
+	.mso-banner li { width:100%; float:left; }
+	.mso-banner li img{ width:100%; float:left;  }
+	
+	
+	
+	
+	
+	@charset "utf-8";
+*{margin:0;padding:0;list-style:none;border:0;}
+body{width:100%; margin:0 auto; overflow-x:hidden; }
+
+/* main_image */
+.main_visual{height:auto; border-top:1px solid #d7d7d7;overflow:hidden;position:relative;}
+.main_image{ height:auto; overflow:hidden; position:relative; width:100%; height:100%;}
+
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.ratio2_1:before {
+    padding-top: 80%;
+}
+
+.img_box:before {
+    content: "";
+    display: block;
+}
+
+.img_con {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.img_con span {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 40px;
+}
+
+
+
+
+
+
+.main_image ul{width:9999px; height:100%; overflow:hidden;position:absolute; top:0; left:0}
+.main_image li{float:left; width:100%; height:100%;}
+
+.main_image li span{ display:block; width:100%; height:100%; }
+.main_image li a{ display:block; width:100%; height:100%; }
+
+.main_image li .img_1{background:url('/images/index/banner-one.png') center top no-repeat; background-size:100% auto;}
+.main_image li .img_2{background:url('/images/index/banner-two.png') center top no-repeat;  background-size:100% auto;}
+.main_image li .img_3{background:url('/images/index/banner-one.png') center top no-repeat;  background-size:100% auto;}
+
+
+
+div.flicking_con{position:absolute;top:360px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -50px;}
+div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../images/btn_main_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
+div.flicking_con a.on{background-position:0 -21px}
+#btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
+#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:100px;}
+#btn_next{background:url(../images/hover_right.png) no-repeat right top;right:100px;}
+
+.main_cen { width:100%; padding-bottom:60px;}
+.main_cen img { width:100%; }
+.finance { width:100%; position:fixed; bottom:0; z-index:10; }
+.finance .sign-up{ width:85%; background:#1FC7FF; height:54px; float:left; color:#FFFFFF; 
+text-align:center; line-height:54px; font-size:18px; }
+.finance .phone { width:15%;  background:#3A6BE0; padding:16px 0px; float:left; }
+.finance .phone img { width:20px; height:22px; display:block; margin:auto; }
+
+
+    </style>
+</head>
+
+<body> 
+
+<div id="pageContain">
+	
+	<div class="main_visual img_box ratio2_1">
+	
+	
+	
+	
+		<div class="img_con">
+           <!--<span>2:1</span>-->
+		   <!--
+			<div class="flicking_con">
+				<a href="#" class="on">1</a>
+				<a href="#" class="">2</a>
+				<a href="#" class="">3</a>
+			</div>
+			-->
+			<div class="main_image">
+				<ul>
+					<li><span class="img_1"></span></li>
+					<li><span class="img_2"></span></li>
+					<li><span class="img_3"></span></li>
+				</ul>
+				<a href="javascript:;" id="btn_prev"></a>
+				<a href="javascript:;" id="btn_next"></a>
+			</div>
+        </div>
+				
+				
+		
+	</div>
+	<div class="main_cen">
+		<img src="/images/index/main.png" />
+	</div>
+
+</div>
+<div class="finance">
+	<div class="sign-up">注册</div>
+	<div class="phone">
+		<a href="tel:400-900-5288"><img src="/images/index/phone.png"/></a>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+
+	
+	$(".sign-up").bind("touchstart",function(){
+		location.href = "register.html"
+	});
+</script>
+</html>
